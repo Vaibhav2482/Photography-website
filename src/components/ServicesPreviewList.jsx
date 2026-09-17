@@ -60,15 +60,20 @@ export default function ServicesPreviewList({ theme = "light" }) {
         className="pointer-events-none fixed left-0 top-0 z-40 hidden h-56 w-44 -translate-x-1/2 -translate-y-1/2 overflow-hidden rounded-xs sm:block"
         style={{ opacity: activeIndex === null ? 0 : 1, transition: "opacity 0.35s ease" }}
       >
-        {services.map((service, i) => (
-          <img
-            key={service.slug}
-            src={service.image}
-            alt=""
-            className="absolute inset-0 h-full w-full object-cover transition-opacity duration-300"
-            style={{ opacity: activeIndex === i ? 1 : 0 }}
-          />
-        ))}
+        {services
+          .filter((service) => service.image)
+          .map((service) => {
+            const i = services.indexOf(service);
+            return (
+              <img
+                key={service.slug}
+                src={service.image}
+                alt=""
+                className="absolute inset-0 h-full w-full object-cover transition-opacity duration-300"
+                style={{ opacity: activeIndex === i ? 1 : 0 }}
+              />
+            );
+          })}
       </div>
     </div>
   );

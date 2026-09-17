@@ -1,4 +1,3 @@
-import { img } from "../lib/img";
 import confettiCelebration from "../assets/images/portfolio/confetti-celebration.jpg";
 import sunsetSareePortrait from "../assets/images/portfolio/sunset-saree-portrait.jpg";
 import editorialCarShoot from "../assets/images/portfolio2/editorial-car-shoot-1.jpg";
@@ -64,7 +63,7 @@ export const services = [
       "On-site backup equipment",
       "Same-week gallery delivery",
     ],
-    image: img("1492684223066-81342ee5ff30", { w: 1600 }),
+    image: null,
   },
   {
     slug: "commercial",
@@ -79,6 +78,6 @@ export const services = [
       "Art direction & mood boards",
       "Fast commercial turnaround",
     ],
-    image: img("1487958449943-2429e8be8625", { w: 1600 }),
+    image: null,
   },
 ];

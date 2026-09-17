@@ -8,7 +8,14 @@ export default function ServiceCard({ service, reverse = false }) {
         reverse ? "md:[&>*:first-child]:order-2" : ""
       }`}
     >
-      <ImageReveal src={service.image} alt={service.title} className="aspect-[4/3]" />
+      {service.image ? (
+        <ImageReveal src={service.image} alt={service.title} className="aspect-[4/3]" />
+      ) : (
+        <div className="flex aspect-[4/3] flex-col items-center justify-center gap-3 border border-ink/15 bg-paper-dim/50 text-center">
+          <span className="font-display text-5xl text-ink/25">{service.number}</span>
+          <span className="tracked-caps text-xs text-muted">Portfolio coming soon</span>
+        </div>
+      )}
 
       <div>
         <span className="tracked-caps text-xs text-muted">{service.number}</span>
