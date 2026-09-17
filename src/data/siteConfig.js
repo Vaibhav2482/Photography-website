@@ -15,6 +15,7 @@ export const siteConfig = {
   email: "hello@akashnawlefilms.example",
   phone: "+91 85528 35297",
   instagram: "https://www.instagram.com/akash.nawle_photo_films",
+  instagramHandle: "@akash.nawle_photo_films",
   socials: [
     { label: "Instagram", href: "https://www.instagram.com/akash.nawle_photo_films" },
     { label: "YouTube", href: "https://www.youtube.com/@AkashNawlefilms_1" },

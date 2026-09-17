@@ -41,7 +41,7 @@ export default function Header() {
       >
         <div className="mx-auto flex max-w-[1600px] items-center justify-between px-6 py-4 sm:px-10">
           <NavLink to="/" aria-label="Home" className={`transition-colors duration-300 ${textClass}`}>
-            <Logo className="h-12 w-12 sm:h-14 sm:w-14" light={transparent} />
+            <Logo className="h-14 w-14 sm:h-16 sm:w-16" light={transparent} />
           </NavLink>
 
           <nav aria-label="Primary" className="hidden md:block">

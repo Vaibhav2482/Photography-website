@@ -1,13 +1,14 @@
 import { img } from "../lib/img";
 import editorialBwSamikshaNikhil from "../assets/images/portfolio/editorial-bw-samiksha-nikhil.jpg";
 import coupleClosePortrait from "../assets/images/portfolio/couple-close-portrait.jpg";
-import bwRingExchange from "../assets/images/portfolio/bw-ring-exchange.jpg";
 import greenFoliageEmbrace from "../assets/images/portfolio/green-foliage-embrace.jpg";
-import familyChandelier from "../assets/images/portfolio/family-chandelier.jpg";
-import confettiCelebration from "../assets/images/portfolio/confetti-celebration.jpg";
 import bwBridalSayali from "../assets/images/portfolio/bw-bridal-sayali.jpg";
-import sunsetSareePortrait from "../assets/images/portfolio/sunset-saree-portrait.jpg";
 import redVeilBride from "../assets/images/portfolio/red-veil-bride.jpg";
+import aishwaryaShlok from "../assets/images/portfolio/aishwarya-shlok.jpg";
+
+// Each real photo below is used in exactly one place across the whole
+// site — check siteConfig.js, services.js, and About.jsx before reusing
+// one here, and don't reuse one already used there.
 
 // Portfolio content. Add, remove, or reorder freely — the grid and detail
 // pages both read straight from this array.
@@ -38,13 +39,23 @@ export const projects = [
     description: "A bridal portrait session with Sayali.",
   },
   {
+    slug: "aishwarya-shlok-wedding",
+    category: "Wedding",
+    title: "Aishwarya & Shlok",
+    location: "India",
+    year: "2025",
+    cover: aishwaryaShlok,
+    gallery: [aishwaryaShlok],
+    description: "A wedding-day portrait of Aishwarya & Shlok.",
+  },
+  {
     slug: "real-weddings-real-moments",
     category: "Wedding",
     title: "Real Weddings, Real Moments",
     location: "India",
     year: "2026",
-    cover: confettiCelebration,
-    gallery: [confettiCelebration, coupleClosePortrait, bwRingExchange, greenFoliageEmbrace, familyChandelier],
+    cover: coupleClosePortrait,
+    gallery: [coupleClosePortrait, greenFoliageEmbrace],
     description:
       "A running collection of unscripted moments from real weddings — no two days alike, and no forced poses.",
   },
@@ -54,9 +65,9 @@ export const projects = [
     title: "Golden Hour",
     location: "India",
     year: "2026",
-    cover: sunsetSareePortrait,
-    gallery: [sunsetSareePortrait, redVeilBride],
-    description: "Natural-light portraits, shot in the last hour before sunset.",
+    cover: redVeilBride,
+    gallery: [redVeilBride],
+    description: "A natural-light bridal portrait, shot in the last hour before sunset.",
   },
   {
     slug: "atelier-noir-ss25",

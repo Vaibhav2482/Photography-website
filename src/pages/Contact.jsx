@@ -1,7 +1,10 @@
+import { Camera, SquarePlay } from "lucide-react";
 import AnimatedText from "../components/AnimatedText";
 import ContactForm from "../components/ContactForm";
 import ImageReveal from "../components/ImageReveal";
 import { siteConfig } from "../data/siteConfig";
+
+const SOCIAL_ICONS = { Instagram: Camera, YouTube: SquarePlay };
 
 export default function Contact() {
   return (
@@ -20,10 +23,19 @@ export default function Contact() {
           <div className="flex flex-col gap-10">
             <ImageReveal
               src={siteConfig.heroImage}
-              alt="Studio contact"
+              alt={`Real client work by ${siteConfig.businessName}`}
               className="aspect-[4/5]"
               hoverZoom
             />
+
+            <div>
+              <p className="tracked-caps mb-3 text-xs text-muted">Let's connect</p>
+              <p className="text-ink/80">
+                Every project starts with a conversation — tell us the date, the place, and
+                what you have in mind, and we'll take it from there.
+              </p>
+            </div>
+
             <dl className="flex flex-col gap-6 text-sm">
               <div>
                 <dt className="tracked-caps text-xs text-muted">Email</dt>
@@ -45,10 +57,35 @@ export default function Contact() {
                 <dt className="tracked-caps text-xs text-muted">Studio</dt>
                 <dd className="mt-1">{siteConfig.location}</dd>
               </div>
+              <div>
+                <dt className="tracked-caps text-xs text-muted">Follow</dt>
+                <dd className="mt-2 flex items-center gap-4">
+                  {siteConfig.socials.map((s) => {
+                    const Icon = SOCIAL_ICONS[s.label];
+                    return (
+                      <a
+                        key={s.label}
+                        href={s.href}
+                        target="_blank"
+                        rel="noreferrer"
+                        aria-label={s.label}
+                        className="flex items-center gap-2 hover:text-maroon"
+                      >
+                        {Icon ? <Icon size={15} strokeWidth={1.5} /> : null}
+                        <span className="tracked-caps text-xs">{s.label}</span>
+                      </a>
+                    );
+                  })}
+                </dd>
+              </div>
             </dl>
           </div>
 
-          <ContactForm />
+          <div>
+            <p className="tracked-caps mb-2 text-xs text-muted">Send us a message</p>
+            <h2 className="font-display mb-8 text-2xl">We'd love to hear about your day.</h2>
+            <ContactForm />
+          </div>
         </div>
       </div>
     </section>
