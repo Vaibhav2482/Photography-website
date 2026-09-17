@@ -84,9 +84,3 @@
     scroll-behavior: auto;
   }
 }
-
-/* custom cursor (pointer devices only, see Cursor.jsx for the matching gate) */
-.cursor-active,
-.cursor-active * {
-  cursor: none;
-}

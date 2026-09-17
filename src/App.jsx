@@ -2,7 +2,6 @@ import { Route, Routes } from "react-router-dom";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Loader from "./components/Loader";
-import Cursor from "./components/Cursor";
 import ScrollToTop from "./components/ScrollToTop";
 import PageTransition from "./components/PageTransition";
 import Home from "./pages/Home";
@@ -17,7 +16,6 @@ export default function App() {
   return (
     <>
       <Loader />
-      <Cursor />
       <ScrollToTop />
       <Header />
       <PageTransition>
