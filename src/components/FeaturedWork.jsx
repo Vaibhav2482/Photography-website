@@ -11,7 +11,7 @@ export default function FeaturedWork({ projects }) {
         return (
           <div key={project.slug} className="grid md:grid-cols-2">
             <div
-              className={`order-2 flex flex-col justify-center gap-6 bg-khaki/25 px-8 py-16 sm:px-14 sm:py-20 ${
+              className={`order-2 flex flex-col justify-center gap-4 bg-khaki/25 px-6 py-10 sm:gap-6 sm:px-14 sm:py-20 ${
                 reverse ? "md:order-2" : "md:order-1"
               }`}
             >

@@ -1,6 +1,6 @@
 import { useRef } from "react";
 import { useGsap } from "../hooks/useGsap";
-import { gsap, prefersReducedMotion } from "../lib/gsap";
+import { gsap, isTouchDevice, prefersReducedMotion } from "../lib/gsap";
 
 /**
  * Editorial image block: clip-mask reveal on scroll-in, optional scroll
@@ -57,7 +57,7 @@ export default function ImageReveal({
         }
       }
 
-      if (hoverZoom && !reduced) {
+      if (hoverZoom && !reduced && !isTouchDevice()) {
         const el = containerRef.current;
         const zoomTo = gsap.quickTo(imgRef.current, "scale", {
           duration: 0.6,
