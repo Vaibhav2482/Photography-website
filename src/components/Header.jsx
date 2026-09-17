@@ -39,19 +39,19 @@ export default function Header() {
           transparent ? "bg-transparent" : "bg-paper/90 backdrop-blur-md"
         }`}
       >
-        <div className="mx-auto flex max-w-[1600px] items-center justify-between px-6 py-4 sm:px-10">
+        <div className="mx-auto flex max-w-[1600px] items-center justify-between px-6 py-6 sm:px-10 sm:py-8">
           <NavLink to="/" aria-label="Home" className={`transition-colors duration-300 ${textClass}`}>
-            <Logo className="h-14 w-14 sm:h-16 sm:w-16" light={transparent} />
+            <Logo className="h-24 w-24 sm:h-28 sm:w-28" light={transparent} />
           </NavLink>
 
           <nav aria-label="Primary" className="hidden md:block">
-            <ul className={`flex items-center gap-9 transition-colors duration-300 ${textClass}`}>
+            <ul className={`flex items-center gap-10 transition-colors duration-300 ${textClass}`}>
               {navLinks.map((link) => (
                 <li key={link.to}>
                   <NavLink
                     to={link.to}
                     className={({ isActive }) =>
-                      `tracked-caps relative pb-1 text-xs transition-opacity hover:opacity-100 ${
+                      `tracked-caps relative pb-1 text-sm transition-opacity hover:opacity-100 ${
                         isActive ? "opacity-100" : "opacity-70"
                       } after:absolute after:inset-x-0 after:bottom-0 after:h-px after:origin-left after:scale-x-0 after:bg-current after:transition-transform after:duration-300 after:content-[''] hover:after:scale-x-100 ${
                         isActive ? "after:scale-x-100" : ""
