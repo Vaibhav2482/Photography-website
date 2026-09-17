@@ -3,7 +3,9 @@ import SectionHeading from "../components/SectionHeading";
 import ImageReveal from "../components/ImageReveal";
 import CTASection from "../components/CTASection";
 import { siteConfig } from "../data/siteConfig";
-import { img } from "../lib/img";
+import bwRingExchange from "../assets/images/portfolio/bw-ring-exchange.jpg";
+import turmericWalk from "../assets/images/portfolio/turmeric-walk.jpg";
+import familyChandelier from "../assets/images/portfolio/family-chandelier.jpg";
 
 const pillars = [
   {
@@ -39,23 +41,25 @@ export default function About() {
       <section className="px-6 pb-24 sm:px-10">
         <div className="mx-auto grid max-w-[1600px] gap-12 md:grid-cols-2 md:gap-20">
           <ImageReveal
-            src={img("1524504388940-b1c1722653e1", { w: 1600 })}
-            alt={siteConfig.photographerName}
+            src={bwRingExchange}
+            alt={`Editorial wedding photography by ${siteConfig.businessName}`}
             className="aspect-[3/4]"
             priority
           />
           <div className="flex flex-col justify-center gap-6">
             <p className="text-lg text-ink">
-              {siteConfig.photographerName} founded {siteConfig.businessName} in{" "}
-              {siteConfig.founded} after several years working as a photojournalist. That
-              background still shapes how every session is approached today: observe first,
-              direct only when it helps, and never let the camera get in the way of what's
-              actually happening.
+              {siteConfig.photographerName} shoots {siteConfig.businessName} with one rule
+              above the rest: observe first, direct only when it helps, and never let the
+              camera get in the way of what's actually happening.
             </p>
             <p className="text-muted">
-              {`This is placeholder biography copy — replace it in `}
+              {`This paragraph and the founding year below are still placeholders — replace them in `}
               <code className="rounded-sm bg-paper-dim px-1.5 py-0.5 text-sm">
                 src/pages/About.jsx
+              </code>
+              {` and `}
+              <code className="rounded-sm bg-paper-dim px-1.5 py-0.5 text-sm">
+                src/data/siteConfig.js
               </code>
               {` with the real story once it's ready.`}
             </p>
@@ -90,14 +94,14 @@ export default function About() {
       <section className="px-6 pb-24 sm:px-10">
         <div className="mx-auto grid max-w-[1600px] grid-cols-1 gap-6 sm:grid-cols-2 sm:gap-10">
           <ImageReveal
-            src={img("1548142813-c348350df52b", { w: 1600 })}
-            alt="Editorial portrait, part of the studio's ongoing personal work"
+            src={turmericWalk}
+            alt="Real client work from the studio's Instagram"
             className="aspect-[4/5]"
             hoverZoom
           />
           <ImageReveal
-            src={img("1517841905240-472988babdf9", { w: 1600 })}
-            alt="Editorial portrait, part of the studio's ongoing personal work"
+            src={familyChandelier}
+            alt="Real client work from the studio's Instagram"
             className="aspect-[4/5] sm:mt-16"
             hoverZoom
           />

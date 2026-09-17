@@ -1,4 +1,6 @@
 import { img } from "../lib/img";
+import confettiCelebration from "../assets/images/portfolio/confetti-celebration.jpg";
+import sunsetSareePortrait from "../assets/images/portfolio/sunset-saree-portrait.jpg";
 
 // Edit freely — title, description, and the four `details` bullets are the
 // only copy that needs to change to reflect real service offerings.
@@ -16,7 +18,7 @@ export const services = [
       "Private online gallery",
       "Fine-art album on request",
     ],
-    image: img("1519741497674-611481863552", { w: 1600 }),
+    image: confettiCelebration,
   },
   {
     slug: "portrait",
@@ -31,7 +33,7 @@ export const services = [
       "Retouched high-res files",
       "Print-ready exports",
     ],
-    image: img("1508214751196-bcfd4ca60f91", { w: 1600 }),
+    image: sunsetSareePortrait,
   },
   {
     slug: "fashion",

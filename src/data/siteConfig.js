@@ -1,6 +1,6 @@
 // Central place to rebrand the whole site. Replace every value here with the
 // real studio's details — nothing else in the codebase needs to change.
-import { img } from "../lib/img";
+import bridalJewelryKiss from "../assets/images/portfolio/bridal-jewelry-kiss.jpg";
 
 export const siteConfig = {
   businessName: "Akash Nawle Films",
@@ -19,14 +19,8 @@ export const siteConfig = {
     { label: "Instagram", href: "https://www.instagram.com/akash.nawle_photo_films" },
     { label: "YouTube", href: "https://www.youtube.com/@AkashNawlefilms_1" },
   ],
-  heroImage: img("1465495976277-4387d4b0b4c6", { w: 2400 }),
-  heroSlides: [
-    img("1465495976277-4387d4b0b4c6", { w: 2400 }),
-    img("1583939003579-730e3918a45a", { w: 2400 }),
-    img("1502635385003-ee1e6a1a742d", { w: 2400 }),
-    img("1519741497674-611481863552", { w: 2400 }),
-    img("1523438885200-e635ba2c371e", { w: 2400 }),
-  ],
+  // Real client work from the studio's own Instagram.
+  heroImage: bridalJewelryKiss,
   founded: 2013,
   yearsActive: new Date().getFullYear() - 2013,
 };
