@@ -5,7 +5,6 @@ import FeaturedWork from "../components/FeaturedWork";
 import FeaturedVideoRow from "../components/FeaturedVideoRow";
 import StatementSection from "../components/StatementSection";
 import ServicesPreviewList from "../components/ServicesPreviewList";
-import Testimonials from "../components/Testimonials";
 import ImageReveal from "../components/ImageReveal";
 import CTASection from "../components/CTASection";
 import Button from "../components/Button";
@@ -105,8 +104,6 @@ export default function Home() {
           <ServicesPreviewList theme="dark" />
         </div>
       </section>
-
-      <Testimonials />
 
       <section className="px-6 py-28 sm:px-10 sm:py-36">
         <div className="mx-auto grid max-w-[1600px] items-center gap-12 md:grid-cols-2 md:gap-20">

@@ -53,15 +53,10 @@ export default function About() {
               camera get in the way of what's actually happening.
             </p>
             <p className="text-muted">
-              {`This paragraph and the founding year below are still placeholders — replace them in `}
-              <code className="rounded-sm bg-paper-dim px-1.5 py-0.5 text-sm">
-                src/pages/About.jsx
-              </code>
-              {` and `}
-              <code className="rounded-sm bg-paper-dim px-1.5 py-0.5 text-sm">
-                src/data/siteConfig.js
-              </code>
-              {` with the real story once it's ready.`}
+              Every shoot starts the same way: showing up early, staying quiet, and paying
+              attention long before anyone says &ldquo;cheese.&rdquo; The goal is a gallery you
+              recognize as your own day — not a stranger's idea of what your day should look
+              like.
             </p>
           </div>
         </div>
