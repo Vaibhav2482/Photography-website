@@ -39,13 +39,13 @@ export default function Header() {
           transparent ? "bg-transparent" : "bg-paper/90 backdrop-blur-md"
         }`}
       >
-        <div className="mx-auto flex max-w-[1600px] items-center justify-between px-6 py-6 sm:px-10 sm:py-8">
+        <div className="mx-auto flex max-w-[1600px] items-center justify-between px-6 py-3 sm:px-10 sm:py-5 lg:py-6">
           <NavLink to="/" aria-label="Home" className={`transition-colors duration-300 ${textClass}`}>
-            <Logo className="h-24 w-24 sm:h-28 sm:w-28" light={transparent} />
+            <Logo className="h-12 w-12 sm:h-16 sm:w-16 lg:h-20 lg:w-20" light={transparent} />
           </NavLink>
 
           <nav aria-label="Primary" className="hidden md:block">
-            <ul className={`flex items-center gap-10 transition-colors duration-300 ${textClass}`}>
+            <ul className={`flex items-center gap-8 lg:gap-10 transition-colors duration-300 ${textClass}`}>
               {navLinks.map((link) => (
                 <li key={link.to}>
                   <NavLink

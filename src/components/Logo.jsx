@@ -1,11 +1,8 @@
 import { useId } from "react";
 import { siteConfig } from "../data/siteConfig";
 
-const initials = siteConfig.photographerName
-  .split(" ")
-  .map((word) => word[0])
-  .join("")
-  .toUpperCase();
+// Requested explicitly as "AK" rather than the auto-derived initials.
+const MONOGRAM = "AK";
 
 /** Original circular studio badge, driven by siteConfig — not a reproduction of any reference mark. */
 export default function Logo({ className = "", light = false }) {
@@ -77,7 +74,7 @@ export default function Logo({ className = "", light = false }) {
         fontWeight="700"
         letterSpacing="1"
       >
-        {initials}
+        {MONOGRAM}
       </text>
     </svg>
   );
