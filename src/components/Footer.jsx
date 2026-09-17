@@ -1,10 +1,10 @@
-import { Briefcase, Camera, Clapperboard } from "lucide-react";
+import { Camera, SquarePlay } from "lucide-react";
 import Logo from "./Logo";
 import { navLinks, siteConfig } from "../data/siteConfig";
 
 // lucide-react no longer ships trademarked brand marks, so these are
 // generic stand-ins — swap for real brand SVGs if that matters to you.
-const SOCIAL_ICONS = { Instagram: Camera, Vimeo: Clapperboard, LinkedIn: Briefcase };
+const SOCIAL_ICONS = { Instagram: Camera, YouTube: SquarePlay };
 
 export default function Footer() {
   const year = new Date().getFullYear();

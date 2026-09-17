@@ -6,17 +6,18 @@ export const siteConfig = {
   businessName: "Akash Nawle Films",
   photographerName: "Akash Nawle",
   shortName: "Akash Nawle Films",
-  // Placeholder — replace once real positioning copy is confirmed.
-  tagline: "Wedding films and editorial photography, shot the way they actually happened.",
-  // Everything below is still placeholder — waiting on the real details.
+  // Adapted from the real Instagram bio ("We promise to turn your moments
+  // into memories... Available worldwide for wedding, pre-wedding, wedding
+  // films & photography").
+  tagline: "Turning your moments into memories — wedding films and photography, available worldwide.",
+  // Location and email are still placeholder — waiting on the real details.
   location: "India — available worldwide",
   email: "hello@akashnawlefilms.example",
-  phone: "+91 00000 00000",
-  instagram: "https://instagram.com/",
+  phone: "+91 85528 35297",
+  instagram: "https://www.instagram.com/akash.nawle_photo_films",
   socials: [
-    { label: "Instagram", href: "https://instagram.com/" },
-    { label: "Vimeo", href: "https://vimeo.com/" },
-    { label: "LinkedIn", href: "https://linkedin.com/" },
+    { label: "Instagram", href: "https://www.instagram.com/akash.nawle_photo_films" },
+    { label: "YouTube", href: "https://www.youtube.com/@AkashNawlefilms_1" },
   ],
   heroImage: img("1465495976277-4387d4b0b4c6", { w: 2400 }),
   heroSlides: [
