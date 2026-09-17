@@ -4,22 +4,25 @@ import { gsap, SplitText, prefersReducedMotion } from "../lib/gsap";
 import { onAppLoaded } from "../lib/appLoad";
 import { siteConfig } from "../data/siteConfig";
 
-import weddingBeach from "../assets/video/hero-wedding-beach.mp4";
-import weddingBeachPoster from "../assets/video/hero-wedding-beach-poster.jpg";
+import dhiralMadhuvanti from "../assets/video/hero-dhiral-madhuvanti.mp4";
+import dhiralMadhuvantiPoster from "../assets/video/hero-dhiral-madhuvanti-poster.jpg";
+import vaibhaviMandar from "../assets/video/hero-vaibhavi-mandar.mp4";
+import vaibhaviMandarPoster from "../assets/video/hero-vaibhavi-mandar-poster.jpg";
 import portraitForest from "../assets/video/hero-portrait-forest.mp4";
 import portraitForestPoster from "../assets/video/hero-portrait-forest-poster.jpg";
-import portraitPark from "../assets/video/hero-portrait-park.mp4";
-import portraitParkPoster from "../assets/video/hero-portrait-park-poster.jpg";
 import fashionJewelry from "../assets/video/hero-fashion-jewelry.mp4";
 import fashionJewelryPoster from "../assets/video/hero-fashion-jewelry-poster.jpg";
 
-// Licensed royalty-free stock footage (Coverr) used as placeholder motion
-// content — swap `src` for the studio's own reels when they're ready.
+// The first two are real client work; the last two are licensed royalty-free
+// stock footage (Coverr) filling in until there's enough real footage to
+// replace them too. See src/data/projects.js for where the other two real
+// clips (hero-wedding-beach / hero-portrait-park, now retired from Hero)
+// went — they moved to FeaturedVideoRow instead of sitting unused.
 const slides = [
-  { src: weddingBeach, poster: weddingBeachPoster },
+  { src: dhiralMadhuvanti, poster: dhiralMadhuvantiPoster },
+  { src: vaibhaviMandar, poster: vaibhaviMandarPoster },
   { src: portraitForest, poster: portraitForestPoster },
   { src: fashionJewelry, poster: fashionJewelryPoster },
-  { src: portraitPark, poster: portraitParkPoster },
 ];
 
 export default function Hero() {

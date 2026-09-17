@@ -9,13 +9,18 @@ import Testimonials from "../components/Testimonials";
 import ImageReveal from "../components/ImageReveal";
 import CTASection from "../components/CTASection";
 import Button from "../components/Button";
+import FilmCard from "../components/FilmCard";
 import { projects } from "../data/projects";
 import { siteConfig } from "../data/siteConfig";
 
 import weddingBeachVideo from "../assets/video/hero-wedding-beach.mp4";
 import weddingBeachPoster from "../assets/video/hero-wedding-beach-poster.jpg";
-import fashionJewelryVideo from "../assets/video/hero-fashion-jewelry.mp4";
-import fashionJewelryPoster from "../assets/video/hero-fashion-jewelry-poster.jpg";
+import portraitParkVideo from "../assets/video/hero-portrait-park.mp4";
+import portraitParkPoster from "../assets/video/hero-portrait-park-poster.jpg";
+import filmGarba from "../assets/video/films/film-garba.mp4";
+import filmGarbaPoster from "../assets/video/films/film-garba-poster.jpg";
+import filmPrasadSayali from "../assets/video/films/film-prasad-sayali.mp4";
+import filmPrasadSayaliPoster from "../assets/video/films/film-prasad-sayali-poster.jpg";
 
 export default function Home() {
   const featured = projects.slice(0, 3);
@@ -44,16 +49,26 @@ export default function Home() {
           description="A sunset ceremony shot beachside — coverage built around ambient light and the sound of the tide, not a shot list."
         />
         <FeaturedVideoRow
-          video={fashionJewelryVideo}
-          poster={fashionJewelryPoster}
+          video={portraitParkVideo}
+          poster={portraitParkPoster}
           title="Behind the Details"
-          description="Editorial detail work for a fashion client — the kind of close, patient coverage that a wide shot can't replace."
+          description="Editorial detail work — the kind of close, patient coverage that a wide shot can't replace."
           ctaLabel="Enquire about a shoot"
           reverse
         />
       </div>
 
-      <section className="pb-28 pt-28 sm:pb-36 sm:pt-36">
+      <section className="px-6 py-28 sm:px-10 sm:py-36">
+        <div className="mx-auto max-w-[1600px]">
+          <SectionHeading eyebrow="Straight from the reel" title="Recent films" />
+          <div className="mt-14 grid grid-cols-2 gap-4 sm:gap-6 md:grid-cols-2 md:gap-8">
+            <FilmCard video={filmPrasadSayali} poster={filmPrasadSayaliPoster} title="Prasad & Sayali" />
+            <FilmCard video={filmGarba} poster={filmGarbaPoster} title="Garba Night" />
+          </div>
+        </div>
+      </section>
+
+      <section className="pb-28 pt-8 sm:pb-36 sm:pt-12">
         <div className="mx-auto flex max-w-[1600px] flex-wrap items-end justify-between gap-6 px-6 pb-14 sm:px-10">
           <SectionHeading eyebrow="Selected work" title="Recent stories" />
           <Button to="/portfolio" variant="text">
