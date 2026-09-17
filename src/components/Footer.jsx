@@ -1,5 +1,6 @@
 import { ArrowUp, Camera, SquarePlay } from "lucide-react";
 import Logo from "./Logo";
+import NewsletterForm from "./NewsletterForm";
 import { navLinks, siteConfig } from "../data/siteConfig";
 
 // lucide-react no longer ships trademarked brand marks, so these are
@@ -24,7 +25,7 @@ export default function Footer() {
       </div>
 
       <div className="px-6 pb-8 pt-16 sm:px-10">
-        <div className="mx-auto grid max-w-[1600px] gap-14 md:grid-cols-[auto_1.2fr_1fr_1fr]">
+        <div className="mx-auto grid max-w-[1600px] gap-14 md:grid-cols-[auto_1.1fr_0.8fr_0.8fr_1.1fr]">
           <Logo className="h-20 w-20" />
 
           <div>
@@ -63,6 +64,11 @@ export default function Footer() {
               </li>
               <li className="text-muted">{siteConfig.location}</li>
             </ul>
+          </div>
+
+          <div>
+            <p className="tracked-caps mb-4 text-xs text-muted">Stay up to date</p>
+            <NewsletterForm />
           </div>
         </div>
 
