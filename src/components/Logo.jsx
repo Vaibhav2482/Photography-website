@@ -7,10 +7,6 @@ const initials = siteConfig.photographerName
   .join("")
   .toUpperCase();
 
-// Six-blade aperture mark, drawn as simple radiating wedges — an original
-// geometric motif (not a reproduction of any camera or studio brand mark).
-const APERTURE_ANGLES = [0, 60, 120, 180, 240, 300];
-
 /** Original circular studio badge, driven by siteConfig — not a reproduction of any reference mark. */
 export default function Logo({ className = "", light = false }) {
   const rawId = useId();
@@ -57,25 +53,25 @@ export default function Logo({ className = "", light = false }) {
         </textPath>
       </text>
 
-      {/* Aperture mark, centered above the monogram. */}
-      <g transform="translate(60, 46)" opacity="0.9">
-        {APERTURE_ANGLES.map((angle) => (
-          <path
-            key={angle}
-            d="M 0,-2 L 7,-8 L 8,-2 Z"
-            fill={stroke}
-            transform={`rotate(${angle})`}
-          />
-        ))}
-        <circle r="2" fill="none" stroke={stroke} strokeWidth="1" />
+      {/*
+        Original vintage-camera mark, line-art style — a generic camera
+        silhouette (body, lens, viewfinder, shutter dial), not a
+        reproduction of any specific brand's camera or logo.
+      */}
+      <g transform="translate(60, 40)" fill="none" stroke={stroke} strokeWidth="1.6" strokeLinejoin="round">
+        <rect x="-17" y="-8" width="34" height="21" rx="2.5" />
+        <rect x="-8" y="-14" width="11" height="7" rx="1.5" />
+        <circle cx="0" cy="3" r="8" />
+        <circle cx="0" cy="3" r="4.2" />
+        <circle cx="11" cy="-3" r="1.6" fill={stroke} stroke="none" />
       </g>
 
       <text
         x="60"
-        y="76"
+        y="80"
         dominantBaseline="middle"
         textAnchor="middle"
-        fontSize="20"
+        fontSize="19"
         fill={stroke}
         fontFamily="Oswald, sans-serif"
         fontWeight="700"
