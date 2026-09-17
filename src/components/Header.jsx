@@ -45,14 +45,16 @@ export default function Header() {
           </NavLink>
 
           <nav aria-label="Primary" className="hidden md:block">
-            <ul className={`flex items-center gap-8 transition-colors duration-300 ${textClass}`}>
+            <ul className={`flex items-center gap-9 transition-colors duration-300 ${textClass}`}>
               {navLinks.map((link) => (
                 <li key={link.to}>
                   <NavLink
                     to={link.to}
                     className={({ isActive }) =>
-                      `tracked-caps text-xs transition-opacity hover:opacity-60 ${
+                      `tracked-caps relative pb-1 text-xs transition-opacity hover:opacity-100 ${
                         isActive ? "opacity-100" : "opacity-70"
+                      } after:absolute after:inset-x-0 after:bottom-0 after:h-px after:origin-left after:scale-x-0 after:bg-current after:transition-transform after:duration-300 after:content-[''] hover:after:scale-x-100 ${
+                        isActive ? "after:scale-x-100" : ""
                       }`
                     }
                   >

@@ -12,7 +12,7 @@ export const siteConfig = {
   tagline: "Turning your moments into memories — wedding films and photography, available worldwide.",
   // Location and email are still placeholder — waiting on the real details.
   location: "India — available worldwide",
-  email: "hello@akashnawlefilms.example",
+  email: "hello@akashnawlefilms.com",
   phone: "+91 85528 35297",
   instagram: "https://www.instagram.com/akash.nawle_photo_films",
   instagramHandle: "@akash.nawle_photo_films",

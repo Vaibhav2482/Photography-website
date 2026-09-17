@@ -7,6 +7,10 @@ const initials = siteConfig.photographerName
   .join("")
   .toUpperCase();
 
+// Six-blade aperture mark, drawn as simple radiating wedges — an original
+// geometric motif (not a reproduction of any camera or studio brand mark).
+const APERTURE_ANGLES = [0, 60, 120, 180, 240, 300];
+
 /** Original circular studio badge, driven by siteConfig — not a reproduction of any reference mark. */
 export default function Logo({ className = "", light = false }) {
   const rawId = useId();
@@ -24,6 +28,22 @@ export default function Logo({ className = "", light = false }) {
       {light ? <circle cx="60" cy="60" r="59" fill="#1a1815" opacity="0.32" /> : null}
       <circle cx="60" cy="60" r="57" fill="none" stroke={stroke} strokeWidth="2" opacity="0.95" />
       <circle cx="60" cy="60" r="49" fill="none" stroke={stroke} strokeWidth="1.5" opacity="0.7" />
+
+      {/* Small tick marks around the ring, like a compass or lens scale. */}
+      {Array.from({ length: 16 }, (_, i) => i * 22.5).map((angle) => (
+        <line
+          key={angle}
+          x1="60"
+          y1="9"
+          x2="60"
+          y2={angle % 90 === 0 ? "14" : "12"}
+          stroke={stroke}
+          strokeWidth="1"
+          opacity="0.6"
+          transform={`rotate(${angle} 60 60)`}
+        />
+      ))}
+
       <path id={`${id}-top`} d="M 16,64 A 44,44 0 0 1 104,64" fill="none" />
       <path id={`${id}-bottom`} d="M 24,68 A 36,36 0 0 0 96,68" fill="none" />
       <text fontSize="9" letterSpacing="2.5" fontWeight="500" fill={stroke} fontFamily="Inter, sans-serif">
@@ -36,15 +56,30 @@ export default function Logo({ className = "", light = false }) {
           FILMS &amp; PHOTOGRAPHY
         </textPath>
       </text>
+
+      {/* Aperture mark, centered above the monogram. */}
+      <g transform="translate(60, 46)" opacity="0.9">
+        {APERTURE_ANGLES.map((angle) => (
+          <path
+            key={angle}
+            d="M 0,-2 L 7,-8 L 8,-2 Z"
+            fill={stroke}
+            transform={`rotate(${angle})`}
+          />
+        ))}
+        <circle r="2" fill="none" stroke={stroke} strokeWidth="1" />
+      </g>
+
       <text
         x="60"
-        y="61"
+        y="76"
         dominantBaseline="middle"
         textAnchor="middle"
-        fontSize="26"
+        fontSize="20"
         fill={stroke}
         fontFamily="Oswald, sans-serif"
         fontWeight="700"
+        letterSpacing="1"
       >
         {initials}
       </text>
