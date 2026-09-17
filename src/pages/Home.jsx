@@ -17,8 +17,8 @@ import weddingBeachVideo from "../assets/video/hero-wedding-beach.mp4";
 import weddingBeachPoster from "../assets/video/hero-wedding-beach-poster.jpg";
 import portraitParkVideo from "../assets/video/hero-portrait-park.mp4";
 import portraitParkPoster from "../assets/video/hero-portrait-park-poster.jpg";
-import filmGarba from "../assets/video/films/film-garba.mp4";
-import filmGarbaPoster from "../assets/video/films/film-garba-poster.jpg";
+import filmMadhuraAnkit from "../assets/video/films/film-madhura-ankit.mp4";
+import filmMadhuraAnkitPoster from "../assets/video/films/film-madhura-ankit-poster.jpg";
 import filmPrasadSayali from "../assets/video/films/film-prasad-sayali.mp4";
 import filmPrasadSayaliPoster from "../assets/video/films/film-prasad-sayali-poster.jpg";
 
@@ -63,7 +63,7 @@ export default function Home() {
           <SectionHeading eyebrow="Straight from the reel" title="Recent films" />
           <div className="mt-14 grid grid-cols-2 gap-4 sm:gap-6 md:grid-cols-2 md:gap-8">
             <FilmCard video={filmPrasadSayali} poster={filmPrasadSayaliPoster} title="Prasad & Sayali" />
-            <FilmCard video={filmGarba} poster={filmGarbaPoster} title="Garba Night" />
+            <FilmCard video={filmMadhuraAnkit} poster={filmMadhuraAnkitPoster} title="Madhura & Ankit" />
           </div>
         </div>
       </section>
