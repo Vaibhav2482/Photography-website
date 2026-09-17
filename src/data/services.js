@@ -1,6 +1,7 @@
 import { img } from "../lib/img";
 import confettiCelebration from "../assets/images/portfolio/confetti-celebration.jpg";
 import sunsetSareePortrait from "../assets/images/portfolio/sunset-saree-portrait.jpg";
+import editorialCarShoot from "../assets/images/portfolio2/editorial-car-shoot-1.jpg";
 
 // Edit freely — title, description, and the four `details` bullets are the
 // only copy that needs to change to reflect real service offerings.
@@ -48,7 +49,7 @@ export const services = [
       "Team coordination",
       "Usage-ready delivery formats",
     ],
-    image: img("1470259078422-826894b933aa", { w: 1600 }),
+    image: editorialCarShoot,
   },
   {
     slug: "event",
