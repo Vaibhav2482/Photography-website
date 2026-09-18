@@ -13,7 +13,7 @@ export default function Portfolio() {
 
   return (
     <>
-      <section className="px-6 pb-12 pt-36 sm:px-10 sm:pt-44">
+      <section className="px-6 pb-10 pt-28 sm:px-10 sm:pt-36">
         <div className="mx-auto max-w-[1600px]">
           <p className="tracked-caps mb-6 text-[10px] tracking-[0.24em] text-muted">Portfolio</p>
           <AnimatedText
@@ -24,7 +24,7 @@ export default function Portfolio() {
             Selected work
           </AnimatedText>
 
-          <div className="mt-12 flex flex-wrap gap-3">
+          <div className="mt-8 flex flex-wrap gap-3">
             {categories.map((category) => (
               <button
                 key={category}
@@ -44,7 +44,7 @@ export default function Portfolio() {
         </div>
       </section>
 
-      <section className="px-6 pb-28 sm:px-10">
+      <section className="px-6 pb-20 sm:px-10">
         <div className="mx-auto max-w-[1600px]">
           <GalleryGrid key={active} projects={filtered} />
         </div>

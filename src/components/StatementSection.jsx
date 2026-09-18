@@ -27,7 +27,7 @@ export default function StatementSection({ eyebrow, title, children }) {
   );
 
   return (
-    <section className="border-y border-ink/10 bg-paper px-6 py-28 sm:px-10 sm:py-36">
+    <section className="border-y border-ink/10 bg-paper px-6 py-20 sm:px-10 sm:py-28">
       <div ref={ref} className="mx-auto max-w-4xl text-center">
         {eyebrow ? (
           <p className="tracked-caps mb-6 text-[10px] tracking-[0.24em] text-muted">{eyebrow}</p>

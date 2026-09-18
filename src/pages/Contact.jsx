@@ -8,7 +8,7 @@ const SOCIAL_ICONS = { Instagram: Camera, YouTube: SquarePlay };
 
 export default function Contact() {
   return (
-    <section className="px-6 pb-28 pt-36 sm:px-10 sm:pt-44">
+    <section className="px-6 pb-20 pt-28 sm:px-10 sm:pt-36">
       <div className="mx-auto max-w-[1600px]">
         <p className="tracked-caps mb-6 text-xs text-muted">Get in touch</p>
         <AnimatedText
@@ -19,7 +19,7 @@ export default function Contact() {
           Let's talk about your project.
         </AnimatedText>
 
-        <div className="mt-16 grid gap-16 lg:grid-cols-[1fr_1.1fr]">
+        <div className="mt-12 grid gap-12 lg:grid-cols-[1fr_1.1fr]">
           <div className="flex flex-col gap-10">
             <ImageReveal
               src={siteConfig.heroImage}

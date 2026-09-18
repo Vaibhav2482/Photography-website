@@ -8,8 +8,8 @@ export default function CTASection({
   to = "/contact",
 }) {
   return (
-    <section className="bg-ink px-6 py-28 text-paper sm:px-10 sm:py-36">
-      <div className="mx-auto flex max-w-3xl flex-col items-center gap-8 text-center">
+    <section className="bg-ink px-6 py-20 text-paper sm:px-10 sm:py-28">
+      <div className="mx-auto flex max-w-3xl flex-col items-center gap-6 text-center">
         {eyebrow ? <p className="tracked-caps text-xs text-paper/50">{eyebrow}</p> : null}
         <AnimatedText
           as="h2"

@@ -20,6 +20,11 @@ import sapphireCoupleWall from "../assets/images/portfolio2/sapphire-couple-wall
 import editorialCarShoot1 from "../assets/images/portfolio2/editorial-car-shoot-1.jpg";
 import editorialCarShoot2 from "../assets/images/portfolio2/editorial-car-shoot-2.jpg";
 import gardenBlessingCouple from "../assets/images/portfolio2/garden-blessing-couple.jpg";
+import bridalJewelryKiss from "../assets/images/portfolio/bridal-jewelry-kiss.jpg";
+import confettiCelebration from "../assets/images/portfolio/confetti-celebration.jpg";
+import familyChandelier from "../assets/images/portfolio/family-chandelier.jpg";
+import sunsetSareePortrait from "../assets/images/portfolio/sunset-saree-portrait.jpg";
+import turmericWalk from "../assets/images/portfolio/turmeric-walk.jpg";
 
 // Each real photo below is used in exactly one place across the whole
 // site — check siteConfig.js, services.js, and About.jsx before reusing
@@ -39,7 +44,7 @@ export const projects = [
     location: "India",
     year: "2026",
     cover: shubhamAishwaryaDance,
-    gallery: [shubhamAishwaryaDance, shubhamAishwaryaSignage],
+    gallery: [shubhamAishwaryaDance, shubhamAishwaryaSignage, confettiCelebration, familyChandelier],
     description: "A joyful entrance at Shubham & Aishwarya's wedding reception.",
   },
   {
@@ -106,7 +111,7 @@ export const projects = [
     location: "India",
     year: "2026",
     cover: bwBridalSayali,
-    gallery: [bwBridalSayali, redVeilBride],
+    gallery: [bwBridalSayali, redVeilBride, bridalJewelryKiss, sunsetSareePortrait, turmericWalk],
     description: "Individual portrait sessions — studio discipline, natural light, no two alike.",
   },
 ];

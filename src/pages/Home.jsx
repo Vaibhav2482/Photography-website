@@ -28,7 +28,7 @@ export default function Home() {
     <>
       <Hero />
 
-      <section className="px-6 py-32 sm:px-10 sm:py-44">
+      <section className="px-6 py-20 sm:px-10 sm:py-28">
         <div className="mx-auto max-w-4xl">
           <AnimatedText
             as="p"
@@ -57,18 +57,23 @@ export default function Home() {
         />
       </div>
 
-      <section className="px-6 py-32 sm:px-10 sm:py-40">
+      <section className="px-6 py-20 sm:px-10 sm:py-28">
         <div className="mx-auto max-w-[1600px]">
-          <SectionHeading eyebrow="Straight from the reel" title="Recent films" />
-          <div className="mt-14 grid grid-cols-2 gap-4 sm:gap-6 md:grid-cols-2 md:gap-8">
+          <div className="flex flex-wrap items-end justify-between gap-5">
+            <SectionHeading eyebrow="Straight from the reel" title="Recent films" />
+            <Button to="/films" variant="text">
+              View all films
+            </Button>
+          </div>
+          <div className="mt-10 grid grid-cols-2 gap-4 sm:gap-6 md:grid-cols-2 md:gap-8">
             <FilmCard video={filmPrasadSayali} poster={filmPrasadSayaliPoster} title="Prasad & Sayali" />
             <FilmCard video={filmMadhuraAnkit} poster={filmMadhuraAnkitPoster} title="Madhura & Ankit" />
           </div>
         </div>
       </section>
 
-      <section className="pb-32 pt-10 sm:pb-40 sm:pt-14">
-        <div className="mx-auto flex max-w-[1600px] flex-wrap items-end justify-between gap-6 px-6 pb-16 sm:px-10">
+      <section className="pb-20 pt-10 sm:pb-28 sm:pt-14">
+        <div className="mx-auto flex max-w-[1600px] flex-wrap items-end justify-between gap-6 px-6 pb-10 sm:px-10 sm:pb-14">
           <SectionHeading eyebrow="Selected work" title="Recent stories" />
           <Button to="/portfolio" variant="text">
             View all work
@@ -84,8 +89,8 @@ export default function Home() {
         a moment into <span className="text-maroon">something worth keeping</span>.
       </StatementSection>
 
-      <section className="bg-ink px-6 py-32 text-paper sm:px-10 sm:py-40">
-        <div className="mx-auto flex max-w-[1600px] flex-col gap-14">
+      <section className="bg-ink px-6 py-20 text-paper sm:px-10 sm:py-28">
+        <div className="mx-auto flex max-w-[1600px] flex-col gap-10">
           <div className="flex flex-wrap items-end justify-between gap-6">
             <div>
               <p className="tracked-caps mb-4 text-xs text-paper/50">What we do</p>
@@ -105,7 +110,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="px-6 py-32 sm:px-10 sm:py-40">
+      <section className="px-6 py-20 sm:px-10 sm:py-28">
         <div className="mx-auto grid max-w-[1600px] items-center gap-12 md:grid-cols-2 md:gap-20">
           <ImageReveal
             src={siteConfig.heroImage}

@@ -14,7 +14,7 @@ const process = [
 export default function Services() {
   return (
     <>
-      <section className="px-6 pb-16 pt-36 sm:px-10 sm:pt-44">
+      <section className="px-6 pb-12 pt-28 sm:px-10 sm:pt-36">
         <div className="mx-auto max-w-[1600px]">
           <p className="tracked-caps mb-6 text-[10px] tracking-[0.24em] text-muted">What we offer</p>
           <AnimatedText
@@ -24,7 +24,7 @@ export default function Services() {
           >
             Services
           </AnimatedText>
-          <p className="mt-8 max-w-lg text-base leading-relaxed text-muted">
+          <p className="mt-6 max-w-lg text-base leading-relaxed text-muted">
             Five core disciplines, each shot with the same editorial approach — composed,
             unobtrusive, and true to the moment.
           </p>
@@ -39,10 +39,10 @@ export default function Services() {
         </div>
       </section>
 
-      <section className="border-t border-ink/10 bg-paper-dim/40 px-6 py-24 sm:px-10">
+      <section className="border-t border-ink/10 bg-paper-dim/40 px-6 py-16 sm:px-10">
         <div className="mx-auto max-w-[1600px]">
           <SectionHeading eyebrow="How it works" title="A straightforward process" />
-          <div className="mt-16 grid gap-12 sm:grid-cols-2 lg:grid-cols-4 lg:gap-8">
+          <div className="mt-10 grid gap-8 sm:grid-cols-2 lg:grid-cols-4 lg:gap-8">
             {process.map((item) => (
               <div key={item.step}>
                 <span className="font-display text-3xl text-maroon">{item.step}</span>

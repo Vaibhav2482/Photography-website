@@ -15,7 +15,7 @@ export default function ProjectDetail() {
 
   return (
     <>
-      <section className="px-6 pb-10 pt-36 sm:px-10 sm:pt-44">
+      <section className="px-6 pb-8 pt-28 sm:px-10 sm:pt-36">
         <div className="mx-auto max-w-[1600px]">
           <Link to="/portfolio" className="tracked-caps text-[10px] tracking-[0.22em] text-muted hover:text-ink">
             ← All work
@@ -32,7 +32,7 @@ export default function ProjectDetail() {
         </div>
       </section>
 
-      <section className="px-6 pb-24 sm:px-10">
+      <section className="px-6 pb-16 sm:px-10">
         <div className="mx-auto max-w-[1600px]">
           <ImageReveal
             src={project.cover}
@@ -44,7 +44,7 @@ export default function ProjectDetail() {
         </div>
       </section>
 
-      <section className="px-6 pb-28 sm:px-10">
+      <section className="px-6 pb-20 sm:px-10">
         <div className="mx-auto grid max-w-[1600px] grid-cols-1 gap-8 sm:grid-cols-2">
           {project.gallery.map((image, i) => (
             <ImageReveal

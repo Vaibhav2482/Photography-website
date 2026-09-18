@@ -25,7 +25,7 @@ const pillars = [
 export default function About() {
   return (
     <>
-      <section className="px-6 pb-20 pt-36 sm:px-10 sm:pt-44">
+      <section className="px-6 pb-14 pt-28 sm:px-10 sm:pt-36">
         <div className="mx-auto max-w-[1600px]">
           <p className="tracked-caps mb-6 text-[10px] tracking-[0.24em] text-muted">About the studio</p>
           <AnimatedText
@@ -38,7 +38,7 @@ export default function About() {
         </div>
       </section>
 
-      <section className="px-6 pb-24 sm:px-10">
+      <section className="px-6 pb-16 sm:px-10">
         <div className="mx-auto grid max-w-[1600px] gap-12 md:grid-cols-2 md:gap-20">
           <ImageReveal
             src={bwRingExchange}
@@ -65,7 +65,7 @@ export default function About() {
       <section className="border-y border-ink/10 bg-paper-dim/40 px-6 py-20 sm:px-10">
         <div className="mx-auto max-w-[1600px]">
           <SectionHeading eyebrow="Philosophy" title="Three things we won't compromise on" />
-          <div className="mt-16 grid gap-12 sm:grid-cols-3 sm:gap-10">
+          <div className="mt-10 grid gap-8 sm:grid-cols-3 sm:gap-10">
             {pillars.map((pillar, i) => (
               <div key={pillar.title} className="rounded-[1.25rem] border border-ink/10 bg-paper/60 p-6 shadow-[0_14px_35px_rgba(26,24,21,0.03)]">
                 <span className="tracked-caps text-[10px] tracking-[0.22em] text-muted">0{i + 1}</span>
@@ -77,7 +77,7 @@ export default function About() {
         </div>
       </section>
 
-      <section className="px-6 py-24 sm:px-10">
+      <section className="px-6 py-16 sm:px-10">
         <div className="mx-auto grid max-w-[1600px] grid-cols-2 gap-6 sm:grid-cols-4 sm:gap-10">
           <Fact label="Founded" value={String(siteConfig.founded)} />
           <Fact label="Years active" value={`${siteConfig.yearsActive}+`} />
@@ -86,7 +86,7 @@ export default function About() {
         </div>
       </section>
 
-      <section className="px-6 pb-24 sm:px-10">
+      <section className="px-6 pb-16 sm:px-10">
         <div className="mx-auto grid max-w-[1600px] grid-cols-1 gap-6 sm:grid-cols-2 sm:gap-10">
           <ImageReveal
             src={turmericWalk}
