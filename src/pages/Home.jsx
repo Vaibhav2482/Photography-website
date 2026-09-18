@@ -28,7 +28,7 @@ export default function Home() {
     <>
       <Hero />
 
-      <section className="px-6 py-28 sm:px-10 sm:py-36">
+      <section className="px-6 py-32 sm:px-10 sm:py-44">
         <div className="mx-auto max-w-4xl">
           <AnimatedText
             as="p"
@@ -57,7 +57,7 @@ export default function Home() {
         />
       </div>
 
-      <section className="px-6 py-28 sm:px-10 sm:py-36">
+      <section className="px-6 py-32 sm:px-10 sm:py-40">
         <div className="mx-auto max-w-[1600px]">
           <SectionHeading eyebrow="Straight from the reel" title="Recent films" />
           <div className="mt-14 grid grid-cols-2 gap-4 sm:gap-6 md:grid-cols-2 md:gap-8">
@@ -67,8 +67,8 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="pb-28 pt-8 sm:pb-36 sm:pt-12">
-        <div className="mx-auto flex max-w-[1600px] flex-wrap items-end justify-between gap-6 px-6 pb-14 sm:px-10">
+      <section className="pb-32 pt-10 sm:pb-40 sm:pt-14">
+        <div className="mx-auto flex max-w-[1600px] flex-wrap items-end justify-between gap-6 px-6 pb-16 sm:px-10">
           <SectionHeading eyebrow="Selected work" title="Recent stories" />
           <Button to="/portfolio" variant="text">
             View all work
@@ -84,7 +84,7 @@ export default function Home() {
         a moment into <span className="text-maroon">something worth keeping</span>.
       </StatementSection>
 
-      <section className="bg-ink px-6 py-28 text-paper sm:px-10 sm:py-36">
+      <section className="bg-ink px-6 py-32 text-paper sm:px-10 sm:py-40">
         <div className="mx-auto flex max-w-[1600px] flex-col gap-14">
           <div className="flex flex-wrap items-end justify-between gap-6">
             <div>
@@ -105,7 +105,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="px-6 py-28 sm:px-10 sm:py-36">
+      <section className="px-6 py-32 sm:px-10 sm:py-40">
         <div className="mx-auto grid max-w-[1600px] items-center gap-12 md:grid-cols-2 md:gap-20">
           <ImageReveal
             src={siteConfig.heroImage}

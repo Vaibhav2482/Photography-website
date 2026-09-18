@@ -35,8 +35,8 @@ export default function Header() {
   return (
     <>
       <header
-        className={`fixed inset-x-0 top-0 z-50 transition-colors duration-500 ${
-          transparent ? "bg-transparent" : "bg-paper/90 backdrop-blur-md"
+        className={`fixed inset-x-0 top-0 z-50 transition-all duration-500 ${
+          transparent ? "bg-transparent" : "border-b border-ink/10 bg-paper/80 backdrop-blur-md"
         }`}
       >
         <div className="mx-auto flex max-w-[1600px] items-center justify-between px-6 py-3 sm:px-10 sm:py-5 lg:py-6">
@@ -51,7 +51,7 @@ export default function Header() {
                   <NavLink
                     to={link.to}
                     className={({ isActive }) =>
-                      `tracked-caps relative pb-1 text-sm transition-opacity hover:opacity-100 ${
+                      `tracked-caps relative pb-1 text-[10px] tracking-[0.24em] transition-all duration-300 hover:opacity-100 ${
                         isActive ? "opacity-100" : "opacity-70"
                       } after:absolute after:inset-x-0 after:bottom-0 after:h-px after:origin-left after:scale-x-0 after:bg-current after:transition-transform after:duration-300 after:content-[''] hover:after:scale-x-100 ${
                         isActive ? "after:scale-x-100" : ""

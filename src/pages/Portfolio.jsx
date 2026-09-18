@@ -15,11 +15,11 @@ export default function Portfolio() {
     <>
       <section className="px-6 pb-12 pt-36 sm:px-10 sm:pt-44">
         <div className="mx-auto max-w-[1600px]">
-          <p className="tracked-caps mb-6 text-xs text-muted">Portfolio</p>
+          <p className="tracked-caps mb-6 text-[10px] tracking-[0.24em] text-muted">Portfolio</p>
           <AnimatedText
             as="h1"
             type="lines"
-            className="font-display max-w-3xl text-4xl leading-[1.05] sm:text-6xl md:text-7xl"
+            className="font-display max-w-4xl text-4xl leading-[0.92] tracking-[-0.05em] sm:text-6xl md:text-7xl"
           >
             Selected work
           </AnimatedText>
@@ -31,10 +31,10 @@ export default function Portfolio() {
                 type="button"
                 onClick={() => setActive(category)}
                 aria-pressed={active === category}
-                className={`tracked-caps rounded-full border px-5 py-2 text-xs transition-colors duration-300 ${
+                className={`tracked-caps rounded-full border px-5 py-2 text-[10px] tracking-[0.18em] transition-all duration-300 ${
                   active === category
-                    ? "border-ink bg-ink text-paper"
-                    : "border-ink/20 text-ink/70 hover:border-ink"
+                    ? "border-ink bg-ink text-paper shadow-[0_10px_25px_rgba(26,24,21,0.1)]"
+                    : "border-ink/15 bg-paper text-ink/70 hover:border-ink/40 hover:text-ink"
                 }`}
               >
                 {category}

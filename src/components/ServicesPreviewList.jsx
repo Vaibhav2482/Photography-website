@@ -35,13 +35,15 @@ export default function ServicesPreviewList({ theme = "light" }) {
               to="/services"
               onMouseEnter={() => setActiveIndex(i)}
               onMouseLeave={() => setActiveIndex(null)}
-              className="group flex items-baseline justify-between gap-6 py-7 transition-colors duration-300 hover:text-maroon"
+              className="group flex items-baseline justify-between gap-6 py-7 transition-all duration-300 hover:text-maroon sm:py-8"
             >
               <span className="flex items-baseline gap-5 sm:gap-8">
-                <span className={`tracked-caps text-xs ${isDark ? "text-paper/50" : "text-muted"}`}>
+                <span className={`tracked-caps text-[10px] tracking-[0.22em] ${isDark ? "text-paper/50" : "text-muted"}`}>
                   {service.number}
                 </span>
-                <span className="font-display text-2xl uppercase sm:text-4xl">{service.title}</span>
+                <span className="font-display text-2xl uppercase tracking-[-0.04em] sm:text-4xl">
+                  {service.title}
+                </span>
               </span>
               <span
                 aria-hidden="true"
@@ -57,7 +59,7 @@ export default function ServicesPreviewList({ theme = "light" }) {
       <div
         ref={imgWrapRef}
         aria-hidden="true"
-        className="pointer-events-none fixed left-0 top-0 z-40 hidden h-56 w-44 -translate-x-1/2 -translate-y-1/2 overflow-hidden rounded-xs sm:block"
+        className="pointer-events-none fixed left-0 top-0 z-40 hidden h-56 w-44 -translate-x-1/2 -translate-y-1/2 overflow-hidden rounded-xl border border-ink/10 bg-paper/80 shadow-[0_18px_45px_rgba(26,24,21,0.12)] backdrop-blur-sm sm:block"
         style={{ opacity: activeIndex === null ? 0 : 1, transition: "opacity 0.35s ease" }}
       >
         {services

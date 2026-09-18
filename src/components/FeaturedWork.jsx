@@ -8,10 +8,11 @@ export default function FeaturedWork({ projects }) {
     <div className="flex flex-col">
       {projects.map((project, i) => {
         const reverse = i % 2 === 1;
+        const isAarya = project.slug === "aarya-portrait";
         return (
           <div key={project.slug} className="grid md:grid-cols-2">
             <div
-              className={`order-2 flex flex-col justify-center gap-4 bg-khaki/25 px-6 py-10 sm:gap-6 sm:px-14 sm:py-20 ${
+              className={`order-2 flex flex-col justify-center gap-4 border border-ink/10 bg-paper-dim/40 px-6 py-10 shadow-[0_18px_45px_rgba(26,24,21,0.04)] sm:gap-6 sm:px-14 sm:py-20 ${
                 reverse ? "md:order-2" : "md:order-1"
               }`}
             >
@@ -32,7 +33,8 @@ export default function FeaturedWork({ projects }) {
               src={project.cover}
               alt={project.title}
               hoverZoom
-              className={`order-1 aspect-[4/3] md:aspect-auto md:h-full ${
+              imgClassName={isAarya ? "object-[center_30%]" : "object-center"}
+              className={`order-1 aspect-[4/3] overflow-hidden rounded-[1.4rem] ring-1 ring-ink/5 shadow-[0_18px_45px_rgba(26,24,21,0.08)] md:aspect-auto md:h-full ${
                 reverse ? "md:order-1" : "md:order-2"
               }`}
             />

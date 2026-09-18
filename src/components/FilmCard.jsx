@@ -19,7 +19,7 @@ export default function FilmCard({ video, poster, title }) {
   };
 
   return (
-    <div className="group relative aspect-[9/16] overflow-hidden bg-ink">
+    <div className="group relative aspect-[9/16] overflow-hidden rounded-[1.5rem] border border-ink/10 bg-ink shadow-[0_20px_55px_rgba(26,24,21,0.12)]">
       <video
         ref={videoRef}
         src={video}

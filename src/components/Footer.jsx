@@ -13,12 +13,12 @@ export default function Footer() {
   return (
     <footer className="border-t border-ink/10 bg-paper">
       <div className="border-b border-ink/10 px-6 py-10 text-center sm:px-10">
-        <p className="tracked-caps mb-3 text-xs text-muted">Follow along</p>
+        <p className="tracked-caps mb-3 text-[10px] tracking-[0.24em] text-muted">Follow along</p>
         <a
           href={siteConfig.instagram}
           target="_blank"
           rel="noreferrer"
-          className="font-display text-3xl uppercase transition-opacity hover:opacity-60 sm:text-4xl"
+          className="font-display text-3xl uppercase tracking-[-0.05em] transition-opacity hover:opacity-60 sm:text-4xl"
         >
           {siteConfig.instagramHandle}
         </a>
@@ -73,8 +73,8 @@ export default function Footer() {
         </div>
 
         <div className="relative mx-auto mt-16 max-w-[1600px] border-t border-ink/10 pt-6">
-          <div className="grid items-center gap-4 text-xs text-muted sm:grid-cols-[1fr_auto_1fr]">
-            <p className="justify-self-start">
+          <div className="grid items-center gap-4 text-[10px] uppercase tracking-[0.18em] text-muted sm:grid-cols-[1fr_auto_1fr]">
+            <p className="justify-self-start tracking-[0.18em]">
               © {year} {siteConfig.businessName}. All rights reserved.
             </p>
 
@@ -82,14 +82,14 @@ export default function Footer() {
               href="https://my-portfolio-bkj2rsp0x-vaibhav2482s-projects.vercel.app/"
               target="_blank"
               rel="noreferrer"
-              className="justify-self-center inline-flex items-center gap-2 text-center transition-opacity duration-300 hover:text-ink"
+              className="justify-self-center inline-flex items-center gap-2 text-center transition-all duration-300 hover:text-ink"
               aria-label="Designed and developed by Vaibhav Nawale"
             >
-              <span className="text-[9px] uppercase tracking-[0.2em] text-muted">
+              <span className="text-[9px] tracking-[0.2em] text-muted">
                 Designed &amp; Developed by
               </span>
-              <span className="font-display text-[0.8rem] uppercase tracking-[0.14em] text-ink sm:text-[0.9rem]">
-                <span className="italic font-medium tracking-[0.12em] text-ink/80">Vaibhav Nawale</span>
+              <span className="font-display text-[0.8rem] tracking-[0.14em] text-ink sm:text-[0.9rem]">
+                <span className="font-medium italic tracking-[0.12em] text-ink/80">Vaibhav Nawale</span>
               </span>
             </a>
 

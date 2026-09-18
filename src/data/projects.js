@@ -48,8 +48,8 @@ export const projects = [
     title: "Aarya",
     location: "India",
     year: "2026",
-    cover: aaryaStaircase1,
-    gallery: [aaryaStaircase1, aaryaStaircase2, aaryaStaircase3],
+    cover: aaryaStaircase2,
+    gallery: [aaryaStaircase2, aaryaStaircase1, aaryaStaircase3],
     description: "A quiet staircase portrait session with Aarya, shot in natural window light.",
   },
   {

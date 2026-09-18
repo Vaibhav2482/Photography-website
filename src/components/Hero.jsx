@@ -44,11 +44,11 @@ export default function Hero() {
         return undefined;
       }
 
-      gsap.set(stageRef.current, { clipPath: "inset(100% 0% 0% 0%)", scale: 1.18 });
-      gsap.set(slideRefs.current[0], { autoAlpha: 1 });
-      gsap.set(slideRefs.current.slice(1), { autoAlpha: 0 });
-      gsap.set(eyebrowRef.current, { autoAlpha: 0, y: 16 });
-      gsap.set(cueRef.current, { autoAlpha: 0 });
+      gsap.set(stageRef.current, { clipPath: "inset(100% 0% 0% 0%)", scale: 1.22 });
+      gsap.set(slideRefs.current[0], { autoAlpha: 1, scale: 1.04 });
+      gsap.set(slideRefs.current.slice(1), { autoAlpha: 0, scale: 1.08 });
+      gsap.set(eyebrowRef.current, { autoAlpha: 0, y: 18 });
+      gsap.set(cueRef.current, { autoAlpha: 0, y: 10 });
 
       const split = new SplitText(headingRef.current, { type: "lines", mask: "lines" });
       gsap.set(split.lines, { yPercent: 110 });
@@ -56,10 +56,10 @@ export default function Hero() {
       const unsubscribe = onAppLoaded(() => {
         gsap
           .timeline({ defaults: { ease: "power4.out" } })
-          .to(stageRef.current, { clipPath: "inset(0% 0% 0% 0%)", scale: 1.05, duration: 1.6 })
-          .to(split.lines, { yPercent: 0, duration: 1.1, stagger: 0.1 }, "-=1.25")
-          .to(eyebrowRef.current, { autoAlpha: 1, y: 0, duration: 0.8 }, "-=0.9")
-          .to(cueRef.current, { autoAlpha: 1, duration: 0.8 }, "-=0.4");
+          .to(stageRef.current, { clipPath: "inset(0% 0% 0% 0%)", scale: 1.08, duration: 1.7 })
+          .to(split.lines, { yPercent: 0, duration: 1.2, stagger: 0.09 }, "-=1.35")
+          .to(eyebrowRef.current, { autoAlpha: 1, y: 0, duration: 0.8 }, "-=0.95")
+          .to(cueRef.current, { autoAlpha: 1, y: 0, duration: 0.8 }, "-=0.5");
       });
 
       // Load each clip's real src only shortly before it's due on screen,
@@ -76,13 +76,13 @@ export default function Hero() {
 
       const slideshow = gsap.timeline({ repeat: -1, delay: 2 });
       const holdTime = 4.5;
-      const fadeTime = 1.6;
+      const fadeTime = 1.5;
       slides.forEach((_, i) => {
         const next = (i + 1) % slides.length;
         slideshow
           .call(() => loadSlide(next))
-          .to(slideRefs.current[i], { autoAlpha: 0, duration: fadeTime, ease: "power2.inOut" }, `+=${holdTime}`)
-          .to(slideRefs.current[next], { autoAlpha: 1, duration: fadeTime, ease: "power2.inOut" }, "<");
+          .to(slideRefs.current[i], { autoAlpha: 0, scale: 1.08, duration: fadeTime, ease: "power2.inOut" }, `+=${holdTime}`)
+          .to(slideRefs.current[next], { autoAlpha: 1, scale: 1.04, duration: fadeTime, ease: "power2.inOut" }, "<");
       });
 
       gsap.to(stageRef.current, {
@@ -129,17 +129,17 @@ export default function Hero() {
         ))}
       </div>
       <div
-        className="absolute inset-0 bg-gradient-to-t from-ink/80 via-ink/15 to-ink/45"
+        className="absolute inset-0 bg-[linear-gradient(180deg,rgba(26,24,21,0.34)_0%,rgba(26,24,21,0.18)_28%,rgba(26,24,21,0.7)_100%)]"
         aria-hidden="true"
       />
 
-      <div className="relative z-10 flex w-full flex-col gap-7 px-6 pb-16 sm:px-10 sm:pb-20">
-        <p ref={eyebrowRef} className="tracked-caps text-xs text-paper/70">
+      <div className="relative z-10 flex w-full flex-col gap-6 px-6 pb-16 sm:px-10 sm:pb-20">
+        <p ref={eyebrowRef} className="tracked-caps text-[10px] tracking-[0.28em] text-paper/75">
           {siteConfig.location}
         </p>
         <h1
           ref={headingRef}
-          className="font-display text-[13vw] leading-[0.92] text-paper sm:text-[9vw] lg:text-[7.2vw]"
+          className="font-display max-w-[10ch] text-[13vw] leading-[0.9] tracking-[-0.05em] text-paper sm:text-[9vw] lg:text-[7.2vw]"
         >
           Editorial Photography,
           <br />
@@ -149,9 +149,9 @@ export default function Hero() {
 
       <div
         ref={cueRef}
-        className="absolute bottom-8 right-6 hidden items-center gap-2 text-paper/70 sm:right-10 md:flex"
+        className="absolute bottom-8 right-6 hidden items-center gap-3 text-paper/70 sm:right-10 md:flex"
       >
-        <span className="tracked-caps text-[10px]">Scroll</span>
+        <span className="tracked-caps text-[10px] tracking-[0.24em]">Scroll</span>
         <span className="h-8 w-px bg-paper/40" />
       </div>
     </section>

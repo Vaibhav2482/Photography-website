@@ -1,9 +1,9 @@
 import { Link } from "react-router-dom";
 
 const THEMES = {
-  light: "border-ink text-ink hover:bg-ink hover:text-paper",
-  dark: "border-paper text-paper hover:bg-paper hover:text-ink",
-  rose: "border-rose bg-rose text-ink hover:bg-rose-dark hover:border-rose-dark",
+  light: "border-ink/80 bg-transparent text-ink shadow-[0_10px_30px_rgba(26,24,21,0.04)] hover:-translate-y-0.5 hover:bg-ink hover:text-paper",
+  dark: "border-paper/70 bg-transparent text-paper shadow-[0_10px_30px_rgba(0,0,0,0.16)] hover:-translate-y-0.5 hover:bg-paper hover:text-ink",
+  rose: "border-rose bg-rose text-ink shadow-[0_10px_30px_rgba(201,154,134,0.25)] hover:-translate-y-0.5 hover:border-rose-dark hover:bg-rose-dark",
 };
 
 /** Shared CTA control — a pill button ("primary") or an underlined text link ("text"). */
@@ -16,11 +16,11 @@ export default function Button({
   className = "",
   ...props
 }) {
-  const base = "group inline-flex w-fit items-center gap-3 tracked-caps text-xs";
+  const base = "group inline-flex w-fit items-center gap-3 tracked-caps text-[10px] font-medium";
   const styles =
     variant === "primary"
-      ? `rounded-full border px-7 py-3.5 transition-colors duration-300 ${THEMES[theme]}`
-      : `relative pb-1 ${theme === "dark" ? "text-paper" : "text-ink"}`;
+      ? `rounded-full border px-8 py-3.5 transition-all duration-300 ease-out ${THEMES[theme]}`
+      : `relative pb-1 tracking-[0.18em] ${theme === "dark" ? "text-paper" : "text-ink"}`;
 
   const arrow =
     variant === "primary" ? (

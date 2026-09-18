@@ -16,15 +16,15 @@ export default function Services() {
     <>
       <section className="px-6 pb-16 pt-36 sm:px-10 sm:pt-44">
         <div className="mx-auto max-w-[1600px]">
-          <p className="tracked-caps mb-6 text-xs text-muted">What we offer</p>
+          <p className="tracked-caps mb-6 text-[10px] tracking-[0.24em] text-muted">What we offer</p>
           <AnimatedText
             as="h1"
             type="lines"
-            className="font-display max-w-3xl text-4xl leading-[1.05] sm:text-6xl md:text-7xl"
+            className="font-display max-w-3xl text-4xl leading-[0.94] tracking-[-0.05em] sm:text-6xl md:text-7xl"
           >
             Services
           </AnimatedText>
-          <p className="mt-8 max-w-lg text-muted">
+          <p className="mt-8 max-w-lg text-base leading-relaxed text-muted">
             Five core disciplines, each shot with the same editorial approach — composed,
             unobtrusive, and true to the moment.
           </p>
