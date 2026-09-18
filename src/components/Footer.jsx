@@ -72,37 +72,55 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="relative mx-auto mt-16 flex max-w-[1600px] flex-col gap-4 border-t border-ink/10 pt-6 text-xs text-muted sm:flex-row sm:items-center sm:justify-between">
-          <p>
-            © {year} {siteConfig.businessName}. All rights reserved.
-          </p>
-          <div className="flex items-center gap-6">
-            {siteConfig.socials.map((s) => {
-              const Icon = SOCIAL_ICONS[s.label];
-              return (
-                <a
-                  key={s.label}
-                  href={s.href}
-                  target="_blank"
-                  rel="noreferrer"
-                  aria-label={s.label}
-                  className="transition-colors hover:text-ink"
-                >
-                  {Icon ? <Icon size={16} strokeWidth={1.5} /> : s.label}
-                </a>
-              );
-            })}
+        <div className="relative mx-auto mt-16 max-w-[1600px] border-t border-ink/10 pt-6">
+          <div className="grid items-center gap-4 text-xs text-muted sm:grid-cols-[1fr_auto_1fr]">
+            <p className="justify-self-start">
+              © {year} {siteConfig.businessName}. All rights reserved.
+            </p>
+
             <a
-              href="#top"
-              onClick={(e) => {
-                e.preventDefault();
-                window.scrollTo({ top: 0, behavior: "smooth" });
-              }}
-              aria-label="Back to top"
-              className="flex h-8 w-8 items-center justify-center rounded-full border border-ink/20 transition-colors hover:border-ink hover:text-ink"
+              href="https://my-portfolio-bkj2rsp0x-vaibhav2482s-projects.vercel.app/"
+              target="_blank"
+              rel="noreferrer"
+              className="justify-self-center inline-flex items-center gap-2 text-center transition-opacity duration-300 hover:text-ink"
+              aria-label="Designed and developed by Vaibhav Nawale"
             >
-              <ArrowUp size={14} strokeWidth={1.5} />
+              <span className="text-[9px] uppercase tracking-[0.2em] text-muted">
+                Designed &amp; Developed by
+              </span>
+              <span className="font-display text-[0.8rem] uppercase tracking-[0.14em] text-ink sm:text-[0.9rem]">
+                <span className="italic font-medium tracking-[0.12em] text-ink/80">Vaibhav Nawale</span>
+              </span>
             </a>
+
+            <div className="flex items-center justify-self-end gap-6">
+              {siteConfig.socials.map((s) => {
+                const Icon = SOCIAL_ICONS[s.label];
+                return (
+                  <a
+                    key={s.label}
+                    href={s.href}
+                    target="_blank"
+                    rel="noreferrer"
+                    aria-label={s.label}
+                    className="transition-colors hover:text-ink"
+                  >
+                    {Icon ? <Icon size={16} strokeWidth={1.5} /> : s.label}
+                  </a>
+                );
+              })}
+              <a
+                href="#top"
+                onClick={(e) => {
+                  e.preventDefault();
+                  window.scrollTo({ top: 0, behavior: "smooth" });
+                }}
+                aria-label="Back to top"
+                className="flex h-8 w-8 items-center justify-center rounded-full border border-ink/20 transition-colors hover:border-ink hover:text-ink"
+              >
+                <ArrowUp size={14} strokeWidth={1.5} />
+              </a>
+            </div>
           </div>
         </div>
       </div>
