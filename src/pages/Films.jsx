@@ -1,5 +1,5 @@
 import AnimatedText from "../components/AnimatedText";
-import FilmCard from "../components/FilmCard";
+import FeaturedVideoRow from "../components/FeaturedVideoRow";
 import CTASection from "../components/CTASection";
 import { films } from "../data/films";
 
@@ -25,13 +25,21 @@ export default function Films() {
         </div>
       </section>
 
-      <section className="px-6 pb-20 sm:px-10">
-        <div className="mx-auto grid max-w-5xl grid-cols-2 gap-4 sm:grid-cols-3 sm:gap-8">
-          {films.map((film) => (
-            <FilmCard key={film.title} {...film} />
-          ))}
-        </div>
-      </section>
+      <div className="flex flex-col">
+        {films.map((film, i) => (
+          <FeaturedVideoRow
+            key={film.title}
+            video={film.video}
+            poster={film.poster}
+            title={film.title}
+            description={film.description}
+            aspectClass={film.aspectClass}
+            eyebrow="Wedding film"
+            ctaLabel="Enquire about this shoot"
+            reverse={i % 2 === 1}
+          />
+        ))}
+      </div>
 
       <CTASection eyebrow="Have a story to film?" title="Let's make something that moves." />
     </>

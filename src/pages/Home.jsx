@@ -65,7 +65,7 @@ export default function Home() {
               View all films
             </Button>
           </div>
-          <div className="mt-10 grid grid-cols-2 gap-4 sm:gap-6 md:grid-cols-2 md:gap-8">
+          <div className="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-2 sm:gap-8">
             <FilmCard video={filmPrasadSayali} poster={filmPrasadSayaliPoster} title="Prasad & Sayali" />
             <FilmCard video={filmMadhuraAnkit} poster={filmMadhuraAnkitPoster} title="Madhura & Ankit" />
           </div>

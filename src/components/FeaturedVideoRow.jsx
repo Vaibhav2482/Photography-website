@@ -13,9 +13,11 @@ export default function FeaturedVideoRow({
   poster,
   title,
   description,
+  eyebrow = "Featured video",
   ctaLabel = "Enquire about this shoot",
   ctaTo = "/contact",
   reverse = false,
+  aspectClass = "aspect-video",
 }) {
   const videoRef = useRef(null);
   const [playing, setPlaying] = useState(true);
@@ -39,7 +41,7 @@ export default function FeaturedVideoRow({
           reverse ? "md:order-2" : "md:order-1"
         }`}
       >
-        <p className="tracked-caps text-xs text-ink/60">Featured video</p>
+        <p className="tracked-caps text-xs text-ink/60">{eyebrow}</p>
         <AnimatedText
           as="h3"
           type="lines"
@@ -54,7 +56,7 @@ export default function FeaturedVideoRow({
       </div>
 
       <div
-        className={`group relative order-1 aspect-video overflow-hidden bg-ink ${
+        className={`group relative order-1 ${aspectClass} overflow-hidden bg-ink ${
           reverse ? "md:order-1" : "md:order-2"
         }`}
       >
