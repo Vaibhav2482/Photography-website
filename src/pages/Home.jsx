@@ -40,7 +40,7 @@ export default function Home() {
         </div>
       </section>
 
-      <div className="flex flex-col">
+      <div className="flex flex-col gap-10 py-10 sm:gap-16 sm:py-16">
         <FeaturedVideoRow
           video={weddingBeachVideo}
           poster={weddingBeachPoster}

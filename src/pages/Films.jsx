@@ -25,7 +25,7 @@ export default function Films() {
         </div>
       </section>
 
-      <div className="flex flex-col">
+      <div className="flex flex-col gap-10 pb-20 sm:gap-16 sm:pb-28">
         {films.map((film, i) => (
           <FeaturedVideoRow
             key={film.title}
